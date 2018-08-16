@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ITMprofile"
+        android:icon="@drawable/icon"
+        android:onClick="BtnProfile"
+        android:title="Profile" />
+    <item
+        android:id="@+id/ITMpurhis"
+        android:icon="@drawable/purchase"
+        android:onClick="BtnPurchase"
+        android:title="Purchase History" />
+    <item
+        android:id="@+id/ITMsellhis"
+        android:icon="@drawable/sell"
+        android:title="Selling History" />
+    <item
+        android:id="@+id/ITMsettings"
+        android:icon="@drawable/settinglogo"
+        android:title="Settings" />
+    <item
+        android:id="@+id/ITMaboutus"
+        android:icon="@drawable/aboutuslogo"
+        android:title="About Us" />
+    <item
+        android:id="@+id/ITMlogout"
+        android:clickable="true"
+        android:icon="@drawable/logout"
+        android:onClick="BtnLogOut"
+        android:title="Log Out" />
+</menu>

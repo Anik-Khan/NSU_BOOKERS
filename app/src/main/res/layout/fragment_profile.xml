@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/IVpropic"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/anik"
+        android:layout_gravity="center_horizontal"
+        android:stateListAnimator="@null"
+        android:elevation="10dp"/>
+
+    <TextView
+        android:id="@+id/TVproname"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Name: Anik Khan"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/TVproid"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="ID: 1530058642"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/TVprophone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Phone: 01688710173"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/TVprogender"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Gender: Male"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/TVproemail"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Email: monjuramanik@gmail.com"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>
