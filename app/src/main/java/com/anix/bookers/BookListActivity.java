@@ -125,6 +125,7 @@ public class BookListActivity extends AppCompatActivity {
 
     }
 
+
     public void BtnProfile(MenuItem item) {
 
         loadFragment(new Profile());
@@ -136,6 +137,17 @@ public class BookListActivity extends AppCompatActivity {
     public void BtnPurchase(MenuItem item) {
 
     }
+
+    public void BtnWish(MenuItem item){
+
+        Intent intent = new Intent(BookListActivity.this,WishPart.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Taleb042.", Toast.LENGTH_LONG).show();
+
+    }
+
+
+
 
     @Override
     public void onBackPressed() {

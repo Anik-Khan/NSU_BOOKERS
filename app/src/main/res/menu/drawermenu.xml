@@ -15,6 +15,12 @@
         android:icon="@drawable/sell"
         android:title="Selling History" />
     <item
+        android:id="@+id/ITMwish"
+        android:clickable="true"
+        android:icon="@drawable/wish"
+        android:onClick="BtnWish"
+        android:title="Add Wish" />
+    <item
         android:id="@+id/ITMsettings"
         android:icon="@drawable/settinglogo"
         android:title="Settings" />
