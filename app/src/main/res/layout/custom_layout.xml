@@ -5,74 +5,74 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/IVbookpic"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        android:stateListAnimator="@null"
-        android:elevation="5dp"
-        android:background="@drawable/intro_to_c"
-        />
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Introduction to C Programming."
-        android:layout_toRightOf="@+id/IVbookpic"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:paddingLeft="10dp"
-        android:id="@+id/TVbookname"
-        android:layout_marginTop="10dp"/>
+        <ImageView
+            android:id="@+id/IVbookpic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:stateListAnimator="@null"
+            android:elevation="5dp"
+            android:background="@drawable/bookicon"
+            />
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Author: Reema Thareja"
-        android:layout_toRightOf="@+id/IVbookpic"
-        android:layout_below="@+id/TVbookname"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:textSize="13dp"
-        android:id="@+id/TVauthorname"
-        android:textColor="#000"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Introduction to C Programming."
+            android:layout_toRightOf="@+id/IVbookpic"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:paddingLeft="10dp"
+            android:id="@+id/TVbookname"
+            android:layout_marginTop="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PRICE"
-        android:gravity="center"
-        android:textStyle="bold|italic"
-        android:layout_toRightOf="@+id/TVbookname"
-        android:textSize="18dp"
-        android:textColor="#000"
-        android:id="@+id/PRICE"
-        />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Author: Reema Thareja"
+            android:layout_toRightOf="@+id/IVbookpic"
+            android:layout_below="@+id/TVbookname"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="13dp"
+            android:id="@+id/TVauthorname"
+            android:textColor="#000"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2000000"
-        android:gravity="center"
-        android:layout_toRightOf="@+id/TVbookname"
-        android:layout_below="@+id/PRICE"
-        android:textSize="18dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/TVamount"
-        android:textColor="#000"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRICE"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:layout_toRightOf="@+id/TVbookname"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:id="@+id/PRICE"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BDT"
-        android:layout_toRightOf="@+id/TVbookname"
-        android:layout_below="@+id/TVamount"
-        android:textSize="15dp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:textColor="#000"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2000000"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/TVbookname"
+            android:layout_below="@+id/PRICE"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TVamount"
+            android:textColor="#000"
+            />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BDT"
+            android:layout_toRightOf="@+id/TVbookname"
+            android:layout_below="@+id/TVamount"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            />
 
-</RelativeLayout>
+    </RelativeLayout>

@@ -8,6 +8,9 @@ public class Person {
 
     private String Name, Email, PhoneNo, NSUID, Gender,AuthKy;
 
+    public Person() {
+    }
+
     public Person(String name, String email, String phoneNo, String NSUID, String gender, String authKy) {
         Name = name;
         Email = email;

@@ -19,14 +19,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:id="@+id/IVbookpic"
-            android:background="@drawable/camera"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Book Pic"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="14dp"/>
+            android:background="@drawable/bookicon"/>
 
     </LinearLayout>
 
@@ -85,6 +78,7 @@
         android:layout_marginTop="80dp"
         android:background="@drawable/loginbutton"
         android:elevation="5dp"
+        android:onClick="BtnAddBook"
         android:stateListAnimator="@null"
         android:text="Sell book"
         android:textColor="@color/white"

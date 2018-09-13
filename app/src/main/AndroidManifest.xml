@@ -31,6 +31,8 @@
         <activity
             android:name=".AddBook"
             android:label="Sell Book" />
+        <activity android:name=".BuyBookActivity"
+            android:label="Buy Book"></activity>
     </application>
 
 </manifest>

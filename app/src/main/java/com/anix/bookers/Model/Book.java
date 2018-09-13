@@ -6,23 +6,16 @@ package com.anix.bookers.Model;
 
 public class Book {
 
-    String Name,Author;
-    int Price,PicId, UserId;
+    private String Name,Author,Price, UserId;
 
-    public Book(int picId, String name, String author, int price, int userid) {
-        PicId = picId;
+    public Book() {
+    }
+
+    public Book(String name, String author, String price, String userId) {
         Name = name;
         Author = author;
         Price = price;
-        UserId = userid;
-    }
-
-    public int getPicId() {
-        return PicId;
-    }
-
-    public void setPicId(int picId) {
-        PicId = picId;
+        UserId = userId;
     }
 
     public String getName() {
@@ -41,19 +34,19 @@ public class Book {
         Author = author;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return Price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         Price = price;
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return UserId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         UserId = userId;
     }
 }
