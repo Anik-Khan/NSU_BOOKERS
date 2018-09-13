@@ -51,9 +51,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public void onBindViewHolder(CustomAdapter.MyViewHolder holder, int position) {
         Book book = bList.get(position);
         holder.TVBookName.setText(book.getName());
-        holder.IVBookPic.setBackgroundResource(book.getPicId());
         holder.TVAuthorName .setText(book.getAuthor());
-        holder.TVAmount.setText(Integer.toString(book.getPrice()));
+        holder.TVAmount.setText(book.getPrice());
     }
 
     @Override

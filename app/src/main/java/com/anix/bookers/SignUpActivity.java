@@ -182,6 +182,16 @@ public class SignUpActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("UserUid",currentFirebaseUser.getUid());
                     editor.commit();
+                    editor.putString("Email",Email);
+                    editor.commit();
+                    editor.putString("Name",Name);
+                    editor.commit();
+                    editor.putString("Phone",Phone);
+                    editor.commit();
+                    editor.putString("NsuID",Nsuid);
+                    editor.commit();
+                    editor.putString("Gender",Gender);
+                    editor.commit();
                     String AuthKey = currentFirebaseUser.getUid();
                     Person person = new Person(Name, Email, Phone, Nsuid, Gender,AuthKey);
                     SavetoFireBaseDB(person,AuthKey);
