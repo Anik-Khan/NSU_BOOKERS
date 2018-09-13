@@ -18,9 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import com.anix.bookers.Adapter.CustomAdapter;
-import com.anix.bookers.Fragment.Profile;
 import com.anix.bookers.Model.Book;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -51,8 +49,8 @@ public class BookListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_list);
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
-        String AuthKey = currentFirebaseUser.getUid();
-        Toast.makeText(getApplicationContext(), "Anik  "+AuthKey, Toast.LENGTH_LONG).show();
+        //String AuthKey = currentFirebaseUser.getUid();
+
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
         PBbooklist = findViewById(R.id.progressbarbooklist);
@@ -74,7 +72,6 @@ public class BookListActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(cAdapter);
-
         input();
     }
 
@@ -131,17 +128,10 @@ public class BookListActivity extends AppCompatActivity {
 
     }
 
-    private void loadFragment(Fragment fragment) {
 
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, fragment).addToBackStack(null).commit();
-
-    }
 
     public void BtnProfile(MenuItem item) {
 
-        loadFragment(new Profile());
 
 
 
@@ -149,15 +139,6 @@ public class BookListActivity extends AppCompatActivity {
 
     public void BtnPurchase(MenuItem item) {
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() == 0) {
-            this.finish();
-        } else {
-            getFragmentManager().popBackStack();
-        }
     }
 
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuyBookActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/booknameid"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Name: "
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/authornameid"
+        android:layout_below="@+id/booknameid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author Name: "
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/priceid"
+        android:layout_below="@+id/authornameid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price: "
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/priceid"
+        android:textColorHint="@color/deepyellow">
+
+        <EditText
+            android:id="@+id/ETdelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Delivery Address"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="@color/deepyellow" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="Click here to buy"
+        android:background="@drawable/loginbutton"
+        android:elevation="5dp"
+        android:onClick="BtnBuy"
+        android:stateListAnimator="@null"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+         />
+
+
+</RelativeLayout>
