@@ -54,6 +54,7 @@
         android:layout_height="match_parent"
         android:background="#ffff"
         app:itemTextColor="#000"
+        android:id="@+id/navView"
         app:itemIconTint="#000"
         app:menu="@menu/drawermenu"
         app:elevation="10dp"

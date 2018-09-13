@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anix.bookers.Adapter.CustomAdapter;
@@ -32,10 +35,13 @@ public class BookListActivity extends AppCompatActivity {
     private List<Book> bookList = new ArrayList<>();
     private RecyclerView recyclerView;
     private CustomAdapter cAdapter;
-
+    SharedPreferences preferences;
+    NavigationView nav;
+    TextView Name, Email;
+    ImageView Pic;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
-
+    View header;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +49,9 @@ public class BookListActivity extends AppCompatActivity {
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
         String AuthKey = currentFirebaseUser.getUid();
         Toast.makeText(getApplicationContext(), "Anik  "+AuthKey, Toast.LENGTH_LONG).show();
-
+        preferences = getSharedPreferences("Profile Preferences", Context.MODE_PRIVATE);
+        nav = findViewById(R.id.navView);
+        header = nav.getHeaderView(0);
         drawerLayout = findViewById(R.id.drawerlayout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -51,6 +59,9 @@ public class BookListActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+        Name = header.findViewById(R.id.TVusername);
+        Email = header.findViewById(R.id.TVuseremail);
+        Pic = header.findViewById(R.id.IVuserpic);
 
         recyclerView = findViewById(R.id.recycler_view);
         cAdapter = new CustomAdapter(bookList);
@@ -60,7 +71,7 @@ public class BookListActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(cAdapter);
-
+        getUser();
         input();
     }
 
@@ -70,6 +81,20 @@ public class BookListActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getUser() {
+        String name = preferences.getString("Name", null);
+        Name.setText(name);
+        String email = preferences.getString("Email", null);
+        Email.setText(email);
+
+        String Gender = preferences.getString("Gender", null);
+        if(Gender.equalsIgnoreCase("male")){
+            Pic.setImageResource(R.drawable.male);
+        }else {
+            Pic.setImageResource(R.drawable.female);
+        }
     }
 
     public void input() {
